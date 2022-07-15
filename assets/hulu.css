@@ -1,0 +1,381 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "work sans";
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  transition: all 0.2s ease-in-out;
+}
+
+body {
+  width: 100vw;
+  overflow-x: hidden;
+  height: 100vh;
+}
+
+.section {
+  max-width: 80rem;
+  margin: auto;
+}
+
+.main-header {
+  background: url("hulu-images/header.jpg");
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  width: 100vw;
+}
+.main-header nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  color: #fff;
+  padding: 2rem 3rem;
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-family: "Poppins Thin";
+  transition: 0.2s;
+  font-weight: normal;
+  cursor: pointer;
+}
+.main-header nav h2:hover {
+  color: #1ce783;
+}
+.main-header .data {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem 0;
+  color: #fff;
+  flex-direction: column;
+  gap: 3rem;
+  text-align: center;
+}
+.main-header .data h1 {
+  color: #1ce783;
+  font-size: 1.3rem;
+}
+.main-header .data .text {
+  font-size: 2rem;
+}
+.main-header .data .imag {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main-header .data .imag img {
+  width: 50%;
+}
+.main-header .data .trial {
+  border: none;
+  outline: none;
+  padding: 2rem 5rem;
+  font-size: 2rem;
+  border-radius: 10px;
+  transition: 0.2s;
+  cursor: pointer;
+}
+.main-header .data .trial:hover {
+  background-color: #0f495c;
+  color: #fff;
+}
+
+.subheader {
+  background-color: #0f495c;
+  display: grid;
+  grid-template-columns: 4fr 2fr;
+  place-items: center;
+  padding: 3rem;
+  max-width: 100vw;
+  background: linear-gradient(318.68deg, #0f495c 0%, #0d3640 49.72%, #08141f 100%);
+}
+.subheader .left {
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.subheader .left .package {
+  color: #1ce783;
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  font-weight: 400;
+}
+.subheader .left .hulu-slogan {
+  font-size: 2.4rem;
+}
+.subheader .right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+}
+.subheader .right .trial {
+  border: none;
+  outline: none;
+  padding: 1.3rem 4rem;
+  background: none;
+  border: 1px solid #fff;
+  color: #fff;
+  cursor: pointer;
+}
+.subheader .right .trial:hover {
+  background-color: #000;
+  color: #fff;
+}
+.subheader a {
+  color: #fff;
+  font-size: 1rem;
+}
+.subheader a:hover {
+  color: #1ce783;
+}
+
+.movies-categories {
+  background-color: #000;
+}
+.movies-categories .section {
+  color: #fff;
+}
+.movies-categories .data {
+  text-align: center;
+  padding: 6rem 1rem;
+}
+.movies-categories .data p:nth-child(1) {
+  color: #1ce783;
+  font-size: 2rem;
+}
+.movies-categories .data p:nth-child(3) {
+  font-size: 1.7rem;
+}
+.movies-categories .data h2 {
+  font-size: 6rem;
+  margin: 2rem 0;
+}
+.movies-categories .grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 2rem 2rem;
+  gap: 1.6rem;
+  place-items: center;
+}
+.movies-categories .grid .image-box {
+  background: url("hulu-images/cover-1.jpg") no-repeat center center/cover;
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 30rem;
+  height: 500px;
+  position: relative;
+}
+.movies-categories .grid .image-box:nth-child(2) {
+  background: url("hulu-images/cover-2.jpg") no-repeat center center/cover;
+}
+.movies-categories .grid .image-box:nth-child(3) {
+  background: url("hulu-images/cover-3.jpg") no-repeat center center/cover;
+}
+.movies-categories .grid .image-box:nth-child(4) {
+  background: url("hulu-images/cover-4.jpg") no-repeat center center/cover;
+}
+.movies-categories .grid .image-box .text {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 2.5rem;
+  font-size: 2rem;
+  font-weight: normal;
+}
+.movies-categories .grid .image-box .text p {
+  font-size: 2rem;
+  line-height: 3rem;
+  text-transform: capitalize;
+}
+.movies-categories .grid .image-box .text h2 {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.article {
+  padding: 10rem 2rem;
+  background-color: #151516;
+}
+.article .section {
+  border: 4px solid #1ce783;
+  border-radius: 1rem;
+}
+.article .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 5rem 4rem;
+}
+.article .container .show-data {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+  text-align: center;
+}
+.article .container .show-data p:nth-child(1) {
+  color: #1ce783;
+  font-size: 2rem;
+}
+.article .container .show-data h2 {
+  color: #fff;
+  font-size: 6rem;
+}
+.article .container .show-data .detail {
+  color: #fff;
+  font-size: 2rem;
+}
+.article .container .show-data .small-text {
+  color: #fff;
+  margin-top: 1rem;
+}
+.article .container .show-data a {
+  color: #fff;
+  font-size: 2rem;
+  margin-top: 2rem;
+}
+.article .container .show-data a:hover {
+  color: #1ce783;
+}
+
+.sports-section {
+  background: url("hulu-images/live-sports.jpg") no-repeat center center/cover;
+  padding: 10rem 0;
+  height: 60rem;
+}
+.sports-section .data {
+  padding: 2rem 2rem;
+  color: #fff;
+  max-width: 70%;
+}
+.sports-section .data p {
+  font-size: 2rem;
+  line-height: 3rem;
+}
+.sports-section .data h2 {
+  font-size: 7rem;
+  margin-bottom: 1rem;
+}
+.sports-section .data .logos {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.sports-section .data .logos img {
+  width: 10rem;
+  border-radius: 50%;
+}
+
+footer {
+  background-color: #fff;
+  padding: 5rem 2rem;
+}
+footer .footer .icons {
+  padding: 2rem 0;
+  display: flex;
+  gap: 1rem;
+}
+footer .footer .icons i {
+  font-size: 2.5rem;
+  color: rgba(119, 119, 119, 0.4666666667);
+  cursor: pointer;
+  transition: 0.2s;
+}
+footer .footer .icons i:hover {
+  transform: scale(1.2);
+}
+footer .container {
+  border-bottom: 1px solid #ddd;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 3rem 0;
+}
+footer .container .box ul li {
+  list-style: none;
+}
+footer .container .box ul li a {
+  font-size: 1.7rem;
+  color: #0f495c;
+  line-height: 3rem;
+  text-decoration: none;
+}
+footer .container .box ul li a:hover {
+  color: #1ce783;
+}
+
+@media (max-width: 46.25em) {
+  .footer .container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 33.75em) {
+  footer {
+    padding: 3rem 5rem;
+  }
+
+  .footer .container {
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    gap: 3rem;
+  }
+}
+@media (max-width: 38.4375em) {
+  .sports-section h2.heading, .article .show-data h2.heading, .data h2.heading {
+    font-size: 4rem;
+  }
+}
+@media (max-width: 25em) {
+  .sports-section h2.heading, .article .show-data h2.heading, .data h2.heading {
+    font-size: 3rem;
+  }
+
+  .sports-section .data {
+    max-width: 40rem;
+  }
+
+  .article .container {
+    padding: 3rem 2rem;
+  }
+  .article .container .show-data a {
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 41.25em) {
+  .movies-categories .grid {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 34em) {
+  .slogan-area .subheader {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 3rem;
+  }
+
+  .data button.trial {
+    padding: 2rem 2rem !important;
+    font-size: 2rem !important;
+  }
+}
+@media (max-width: 20em) {
+  .movies-categories .grid .image-box {
+    width: 26rem;
+  }
+  .movies-categories .grid .image-box:nth-child(1) .text {
+    padding-top: 8rem;
+  }
+}/*# sourceMappingURL=hulu.css.map */

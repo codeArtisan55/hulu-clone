@@ -1,0 +1,346 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'work sans';
+}
+
+//Colors
+$white: #fff;
+$hulu-color: #1ce783;
+$subheader: #0f495c;
+$black: #000;
+$article-bg: #151516;
+$para: #7777;
+//Mixins
+@mixin flexProp($align) {
+  display: flex;
+  justify-content: $align;
+  align-items: center;
+}
+@mixin bo {
+  border: none;
+  outline: none;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  transition: all 0.2s ease-in-out;
+}
+body {
+  width: 100vw;
+  overflow-x: hidden;
+  height: 100vh;
+}
+.section {
+  max-width: 80rem;
+  margin: auto;
+}
+.main-header {
+  background: url('hulu-images/header.jpg');
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  width: 100vw;
+
+  nav {
+    @include flexProp(flex-end);
+    color: $white;
+    padding: 2rem 3rem;
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-family: 'Poppins Thin';
+    transition: 0.2s;
+    font-weight: normal;
+    cursor: pointer;
+
+    h2:hover {
+      color: $hulu-color;
+    }
+  }
+  .data {
+    @include flexProp(center);
+    padding: 3rem 0;
+    color: $white;
+    flex-direction: column;
+    gap: 3rem;
+    text-align: center;
+
+    h1 {
+      color: $hulu-color;
+      font-size: 1.3rem;
+    }
+    .text {
+      font-size: 2rem;
+    }
+
+    .imag {
+      @include flexProp(center);
+    }
+
+    .imag img {
+      width: 50%;
+    }
+    .trial {
+      @include bo;
+      padding: 2rem 5rem;
+      font-size: 2rem;
+      border-radius: 10px;
+      transition: 0.2s;
+      cursor: pointer;
+      &:hover {
+        background-color: $subheader;
+        color: $white;
+      }
+    }
+  }
+}
+.subheader {
+  background-color: $subheader;
+  display: grid;
+  grid-template-columns: 4fr 2fr;
+  place-items: center;
+  padding: 3rem;
+  // display: none;
+  max-width: 100vw;
+  // position: fixed;
+  background: linear-gradient(
+    318.68deg,
+    #0f495c 0%,
+    #0d3640 49.72%,
+    #08141f 100%
+  );
+
+  .left {
+    color: $white;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    .package {
+      color: $hulu-color;
+      text-transform: uppercase;
+      font-size: 1.4rem;
+      font-weight: 400;
+    }
+    .hulu-slogan {
+      font-size: 2.4rem;
+    }
+  }
+  .right {
+    @include flexProp(center);
+    flex-direction: column;
+    gap: 1rem;
+
+    .trial {
+      @include bo;
+      padding: 1.3rem 4rem;
+      background: none;
+      border: 1px solid $white;
+      color: $white;
+      cursor: pointer;
+      &:hover {
+        background-color: $black;
+        color: $white;
+      }
+    }
+  }
+  a {
+    color: $white;
+    font-size: 1rem;
+    &:hover {
+      color: $hulu-color;
+    }
+    // text-decoration: none;
+  }
+}
+.movies-categories {
+  background-color: $black;
+  .section {
+    color: $white;
+  }
+  .data {
+    text-align: center;
+    padding: 6rem 1rem;
+    p:nth-child(1) {
+      color: $hulu-color;
+      font-size: 2rem;
+    }
+    p:nth-child(3) {
+      font-size: 1.7rem;
+    }
+    h2 {
+      font-size: 6rem;
+      margin: 2rem 0;
+    }
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 2rem 2rem;
+    gap: 1.6rem;
+    place-items: center;
+    .image-box {
+      // background:url("hulu-images/cover-1.jpg") no-repeat;
+      background: url('hulu-images/cover-1.jpg') no-repeat center center / cover;
+      background-size: 100%;
+      background-position: center;
+      background-repeat: no-repeat;
+      width: 30rem;
+      height: 500px;
+      position: relative;
+      &:nth-child(2) {
+        background: url('hulu-images/cover-2.jpg') no-repeat center center /
+          cover;
+      }
+      &:nth-child(3) {
+        background: url('hulu-images/cover-3.jpg') no-repeat center center /
+          cover;
+      }
+      &:nth-child(4) {
+        background: url('hulu-images/cover-4.jpg') no-repeat center center /
+          cover;
+      }
+      .text {
+        background-color: rgba(0, 0, 0, 0.5);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        padding: 2.5rem;
+        font-size: 2rem;
+        font-weight: normal;
+
+        p {
+          font-size: 2rem;
+          line-height: 3rem;
+          text-transform: capitalize;
+        }
+        h2 {
+          font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+            'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+      }
+    }
+  }
+}
+.article {
+  padding: 10rem 2rem;
+  background-color: $article-bg;
+  .section {
+    border: 4px solid $hulu-color;
+    border-radius: 1rem;
+  }
+  .container {
+    @include flexProp(center);
+    flex-direction: column;
+    padding: 5rem 4rem;
+    .show-data {
+      @include flexProp(center);
+      flex-direction: column;
+      gap: 1rem;
+      text-align: center;
+      p:nth-child(1) {
+        color: $hulu-color;
+        font-size: 2rem;
+      }
+      h2 {
+        color: $white;
+        font-size: 6rem;
+      }
+      .detail {
+        color: $white;
+        font-size: 2rem;
+      }
+      .small-text {
+        color: $white;
+        margin-top: 1rem;
+      }
+      a {
+        color: $white;
+        font-size: 2rem;
+        margin-top: 2rem;
+        &:hover {
+          color: $hulu-color;
+        }
+      }
+    }
+  }
+}
+
+.sports-section {
+  background: url('hulu-images/live-sports.jpg') no-repeat center center / cover;
+  padding: 10rem 0;
+  height: 60rem;
+
+  .data {
+    padding: 2rem 2rem;
+    color: $white;
+    max-width: 70%;
+    p {
+      font-size: 2rem;
+      line-height: 3rem;
+    }
+
+    h2 {
+      font-size: 7rem;
+      margin-bottom: 1rem;
+    }
+    .logos {
+      @include flexProp(flex-start);
+      flex-wrap: wrap;
+      gap: 1rem;
+      img {
+        width: 10rem;
+        // height:5rem;
+        // background-color: $white;
+        border-radius: 50%;
+      }
+    }
+  }
+}
+
+footer {
+  background-color: $white;
+  padding: 5rem 2rem;
+  .footer {
+    .icons {
+      padding: 2rem 0;
+      display: flex;
+      gap: 1rem;
+      i {
+        font-size: 2.5rem;
+        color: $para;
+        cursor: pointer;
+        transition: 0.2s;
+        &:hover {
+          transform: scale(1.2);
+        }
+      }
+    }
+  }
+
+  .container {
+    border-bottom: 1px solid #ddd;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 3rem 0;
+
+    .box ul li {
+      list-style: none;
+      a {
+        font-size: 1.7rem;
+        color: $subheader;
+        line-height: 3rem;
+        text-decoration: none;
+        &:hover {
+          color: $hulu-color;
+        }
+      }
+    }
+  }
+}
+
+@import 'mqueries';
